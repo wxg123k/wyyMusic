@@ -1,0 +1,239 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 宋体;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+h1 {
+	margin: 0;
+}
+li{
+	list-style: none;
+}
+#music {
+	width: 700px;
+	height: 400px;
+	margin: 100px auto;
+	border-radius: 3px;
+	overflow: hidden;
+}
+body{
+	background-color: paleturquoise;
+}
+header {
+	width: 100%;
+	height: 12%;
+	padding: 10px 15px;
+	background-color: #EC4141;
+	display: flex;
+	justify-content: space-between;
+}
+
+main {
+	width: 100%;
+	height: 76%;
+	background-color: white;
+	border-left: 1px solid #E0E0E0;
+	border-right: 1px solid #E0E0E0;
+	border-bottom: 2px solid #E0E0E0;
+	display: flex;
+	justify-content: space-between;
+}
+
+footer {
+	width: 100%;
+	height: 12%;
+	background-color: white;
+}
+
+header h1 {
+	font-size: 22px;
+	line-height: 30px;
+	color: white;
+	display: inline-block;
+}
+
+header img {
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+	position: relative;
+	bottom: 5px;
+}
+
+.search {
+	background-color: white;
+	border-radius: 20px;
+	padding: 4px 20px;
+}
+
+.search input {
+	background-color: white;
+	border: none;
+	outline: none;
+}
+.left{
+	width: 25%;
+	height: 100%;
+	overflow-y: scroll;
+	border-right: 1px solid #E0E0E0;
+	padding: 8px;
+	overflow-x: hidden;
+}
+.middle{
+	width: 50%;
+	height: 100%;
+	border-right: 1px solid #E0E0E0;
+	position: relative;
+	overflow: hidden;
+}
+.right{
+	width: 25%;
+	height: 100%;
+}
+.left li{
+	display: flex;
+	justify-content: space-between;
+	padding: 3px;
+}
+.left li:hover{
+	background-color: #F0F1F2;
+}
+.left li img{
+	width: 20px;
+	display: inline-block;
+	cursor: pointer;
+}
+.left li b{
+	position: relative;
+	font-size: 12px;
+	top: 2px;
+	right: 5px;
+}
+/*滚动条整体样式*/
+.left::-webkit-scrollbar,.message::-webkit-scrollbar {
+	width: 4px;
+}
+/* 滚动的滑块 */
+.left::-webkit-scrollbar-thumb,.message::-webkit-scrollbar-thumb{
+	background-color: #E0E0E0;
+	border-radius: 2px;
+}
+.CD{
+	position: relative;
+	width: 180px;
+	height: 180px;
+	position: absolute;
+	top: calc(50% - 110px);
+	left: calc(50% - 90px);
+	/* transition: 5s linear; */
+	/* animation-play-state: paused; */
+}
+.middle .cd{
+	width: 180px;
+	height: 180px;
+	position: absolute;
+}
+.middle .let{
+	width: 35px;
+	height: 120px;
+	position: absolute;
+	top: 0;
+	left: 170px;
+	transform: rotate(-55deg);
+	transition: .5s linear;
+	transform-origin: top left;
+}
+.middle .letRotate{
+	transition: .5s linear;
+	transform-origin: top left;
+	transform: rotate(-24deg);
+}
+#music .play{
+	animation-play-state: running;
+}
+#music .pause{
+	animation-play-state: paused;
+}
+.middle .pic{
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	position: absolute;
+	left: calc(50% - 50px);
+	top: calc(50% - 50px);
+}
+.middle .rotate{
+	animation: rotate 3s infinite linear;
+	transform-origin: center;
+}
+@keyframes rotate{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+.right h2{
+	font-size: 18px;
+	margin-top: 10px;
+	padding-left: 5px;
+	font-weight: bold;
+}
+.right .message{
+	overflow-y: scroll;
+	height: calc(100% - 38px);
+}
+.right .message img{
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+}
+.right li{
+	padding: 5px 10px;
+	display: flex;
+	justify-content: space-between;
+}
+.right .message .text{
+	padding: 0 5px;
+}
+.right .message p{
+	margin: 0;
+}
+footer audio{
+	width: 100%;
+	background-image: linear-gradient(#F1F3F4,#F1F3F4);
+}
+#music-app{
+	position: relative;
+}
+.video{
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	/* display: none; */
+}
+.shade{
+	width: 100%;
+	height: 100vh;
+	opacity: .6;
+	background-color: #c5c5c5;
+	position: absolute;
+}
+.video .video-con{
+	display: flex;
+	justify-content: center;
+	margin-top: 100px;
+}
+.video video{
+	width: 700px;
+	z-index: 111;
+}
+.playSong{
+	cursor: pointer;
+}
